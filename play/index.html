@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <crossorigin="anonymous"></script>
     <script async src=""
     crossorigin="anonymous"></script>
     <script>
@@ -49,7 +50,7 @@
       gtag("js", new Date());
       gtag("config", "G-0YLTCV2MMS");
     </script>
-    <title>Loading... - StrongDog XP</title>
+    <title>Loading... - DaBrain</title>
     <style>
       body {
         font-family: "Poppins", sans-serif;
@@ -431,7 +432,7 @@
     <div class="header">
       <div class="menu-icon" id="menuIcon">&#9776;</div>
       <a href="../index.html" class="header-logo">
-        <span>StrongDog</span>
+        <span>DaBrain</span>
         <span>XP</span>
       </a>
     </div>
@@ -503,12 +504,12 @@
     </div>
 
     <div class="cards-section">
-      <h2>Recommended Games</h2>
+      <h2>Recommendedations</h2>
       <div class="card-container" id="cardContainer"></div>
     </div>
 
     <div id="redirectMessage">
-      <h2>Redirecting to the game...</h2>
+      <h2>Redirecting...</h2>
       <p>
         If you are not redirected automatically,
         <a href="#" id="manualRedirectLink">click here</a>.
@@ -701,7 +702,7 @@
           gameContainer.innerHTML = "";
           gameContainer.appendChild(iframe);
           gameTitleElement.textContent = title;
-          document.title = title + " - StrongDog XP";
+          document.title = title + " - DaBrain";
 
           iframe.onload = function () {
             fetch(
@@ -734,7 +735,7 @@
         }
 
         gameTitleElement.textContent = "Loading...";
-        document.title = "Loading... - StrongDog XP";
+        document.title = "Loading... - DaBrain XP XP";
 
         if (!selectedGame) {
           embedGame("../404.html", "Not Found");
@@ -744,7 +745,7 @@
             762,
           ];
           if (normalGameIds.includes(selectedGame.id)) {
-            document.title = "Redirecting... - StrongDog XP";
+            document.title = "Redirecting... - DaBrain";
             redirectMessage.style.display = "block";
 
             const page = selectedGame.page;
@@ -794,7 +795,7 @@
           async function toggleFavorite() {
             const user = auth.currentUser;
             if (!user) {
-              alert("Please sign in to favorite a game!");
+              alert("Please sign in to view all content!");
               return;
             }
             const favRef = db.collection("favs").doc(user.uid);
